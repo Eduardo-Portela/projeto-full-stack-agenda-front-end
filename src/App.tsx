@@ -1,12 +1,18 @@
-import { useState } from 'react'
 import './App.css'
+import { RoutesMain } from './routes'
+import GlobalStyles from './styles/GlobalStyles'
+import { AuthProvider } from './providers/AuthProvider'
+import { ToastContainer } from 'react-toastify'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-   <h1>OK</h1>
+      <GlobalStyles/>
+      <AuthProvider>
+        <RoutesMain/>
+      </AuthProvider>
+      <ToastContainer/>
     </>
   )
 }
