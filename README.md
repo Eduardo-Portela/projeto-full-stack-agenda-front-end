@@ -18,5 +18,10 @@ $ npm run dev
 
 ## Watch local mode
 ```
-https://localhost:3000/api
+https://localhost:5173/
+```
+
+## Api Repository
+```
+https://github.com/Eduardo-Portela/projeto-full-stack-agenda/blob/main/README.md
 ```
