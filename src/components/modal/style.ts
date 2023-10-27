@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ModalWrapper = styled.div`
+  right: 0;
     width: 100%;
     height: 100vh;
     position: fixed;

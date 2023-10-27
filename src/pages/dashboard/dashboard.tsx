@@ -48,7 +48,7 @@ export const Dashboard = () => {
   const [openModalEditContatct, setOpenModalEdit] = useState<boolean>(false)
   const [openModalDeleteContact, setOpenModalDeleteContact] = useState<boolean>(false)
   const navigate = useNavigate()
-  console.log(openModalDeleteContact)
+
   const token  = localStorage.getItem("@agenda:token")
   let  decodedToken: IDecodedToken = {
     email: "",

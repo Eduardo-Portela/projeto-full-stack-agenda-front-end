@@ -16,6 +16,7 @@ export const Register = () => {
     const handleSubmitRegister = async(data: registerData) => {
         try {
             const response = await api.post("/users", data)
+            console.log(response.status)
             
             if(response.status ==201){
                 NotifySucess("cadastro realizado com sucesso!")
