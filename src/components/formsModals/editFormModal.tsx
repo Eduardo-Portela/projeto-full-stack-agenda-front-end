@@ -1,8 +1,7 @@
-import React, { ReactNode } from 'react'
+import { ReactNode } from 'react'
 import { FormEdit } from './style'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { UpdateUserData, registerSchema } from '../../pages/register/validator'
-import { Link, useNavigate } from 'react-router-dom'
 import { useForm } from "react-hook-form"
 import { api } from '../../services/api'
 import { NotifyError, NotifySucess } from '../toast/toastfy'
