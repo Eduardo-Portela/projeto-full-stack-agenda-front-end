@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { api } from '../../services/api'
 import { ContainerDash, DivCardInfos, DivCards, DivSettings, DivUserInfos, HeaderDash, MainDash } from './style'
 import { Modal } from '../../components/modal/modal'
@@ -10,14 +10,9 @@ import { IoMdAddCircleOutline } from 'react-icons/io'
 import { BiPencil } from 'react-icons/bi'
 import { BsTrash } from 'react-icons/bs'
 import { AddContactModal } from '../../components/formsModals/addContactModal'
-import { DeleteContatctModal} from '../../components/formsModals/deleteContactModal'
 import { NotifyError, NotifySucess } from '../../components/toast/toastfy'
 import { AxiosError } from 'axios'
-import { addContactData, addContactSchema, updateContactData } from '../register/validator'
-import { useForm } from "react-hook-form"
-import { zodResolver } from '@hookform/resolvers/zod'
 import { EditFormModalContact } from '../../components/formsModals/editContactModal'
-import ReactDOM from 'react-dom'
 
 interface IContacts {
   id: string,

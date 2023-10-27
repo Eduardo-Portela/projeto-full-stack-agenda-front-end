@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import  { ReactNode } from 'react'
 import { FormEdit } from './style'
 import { NotifyError, NotifySucess } from '../toast/toastfy'
 import { AxiosError } from 'axios'
@@ -10,11 +10,12 @@ interface IDeleteUserProps {
 }
 
 export const DeleteUserModalForm = ({children}: IDeleteUserProps) => {
-        const { register, handleSubmit } = useForm({})
+        const {register, handleSubmit } = useForm({})
     
         const token = localStorage.getItem("@agenda:token")
         const decodedToken = JSON.parse(atob(token!.split('.')[1]))
         const userId = decodedToken.sub
+        console.log(register)
     
         const handleSubmitUpdateUser = async() => {
             try {

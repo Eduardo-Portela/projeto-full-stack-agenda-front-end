@@ -1,8 +1,7 @@
-import React, { ReactNode } from 'react'
+import  { ReactNode } from 'react'
 import { FormEdit } from './style'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { addContactData, addContactSchema, registerSchema } from '../../pages/register/validator'
-import { Link, useNavigate } from 'react-router-dom'
+import { addContactData, addContactSchema } from '../../pages/register/validator'
 import { useForm } from "react-hook-form"
 import { api } from '../../services/api'
 import { NotifyError, NotifySucess } from '../toast/toastfy'
@@ -18,8 +17,7 @@ export const AddContactModal = ({children}: IEditFormProps) => {
     })
 
     const token = localStorage.getItem("@agenda:token")
-    const decodedToken = JSON.parse(atob(token!.split('.')[1]))
-    const userId = decodedToken.sub
+
 
     const handleSubmitUpdateUser = async(data: addContactData) => {
         console.log(data)

@@ -1,13 +1,11 @@
-import React, { ReactNode } from 'react'
+import  { ReactNode } from 'react'
 import { FormEdit } from './style'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { UpdateUserData, addContactData, addContactSchema, registerSchema, updateContactData, updateSchema, updateSchemaContact } from '../../pages/register/validator'
-import { Link, useNavigate } from 'react-router-dom'
+import { updateContactData,  updateSchemaContact } from '../../pages/register/validator'
 import { useForm } from "react-hook-form"
 import { api } from '../../services/api'
 import { NotifyError, NotifySucess } from '../toast/toastfy'
 import { AxiosError } from 'axios'
-import { Modal } from '../modal/modal'
 
 interface IEditFormProps{
     children: ReactNode
@@ -19,8 +17,6 @@ export const EditFormModalContact = ({children, contactId}: IEditFormProps) => {
         resolver: zodResolver(updateSchemaContact)
     })
     const token = localStorage.getItem("@agenda:token")
-    const decodedToken = JSON.parse(atob(token!.split('.')[1]))
-    const userId = decodedToken.sub
 
     const handleSubmitUpdatContact = async(data: updateContactData) => {
         console.log(data)

@@ -1,9 +1,6 @@
-import React, { ReactNode } from 'react'
+import { ReactNode } from 'react'
 import { FormEdit } from './style'
-import { NotifyError, NotifySucess } from '../toast/toastfy'
-import { AxiosError } from 'axios'
-import { api } from '../../services/api'
-import { useForm } from "react-hook-form"
+
 
 interface IDeleteUserProps {
     children: ReactNode
