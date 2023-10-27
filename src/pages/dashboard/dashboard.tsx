@@ -93,6 +93,7 @@ export const Dashboard = () => {
         if(error instanceof AxiosError){
             NotifyError(error.response?.data.message[0])
         }
+        console.log(openModalDeleteContact)
         console.log(error)    }
 }
 
